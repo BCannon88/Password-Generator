@@ -14,6 +14,9 @@ function writePassword() {
   
   passwordText.value = password;
 }
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
 
 function writePassword()  {
 
@@ -74,10 +77,7 @@ if (passwordOptions.confirmSpecialCharacter){
 
 
 
-  var generatedPassword = generatePassword(passwordOptions)
-  console.log('generatedPassword: ', generatedPassword) 
+  var newPassword = generatePassword(passwordOptions)
+  console.log('newPassword: ', newPassword) 
   
-  alert(generatedPassword)
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-document.getElementById('#generate').addEventListener("click", generatePassword);
+  alert(newPassword)
